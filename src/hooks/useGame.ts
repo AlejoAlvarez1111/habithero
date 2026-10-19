@@ -70,5 +70,5 @@ export function useGame() {
     await cargar()
   }
 
-  return { habits, logs, totals, loading, error, hoy, marcar, deshacer }
+    return { habits, logs, totals, loading, error, hoy, marcar, deshacer, recargar: cargar }
 }

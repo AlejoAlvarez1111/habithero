@@ -84,3 +84,16 @@ export function detalle(habit: Habit): string {
   const area = habit.areas?.name ?? 'Sin área'
   return `${area} · +${habit.xp} XP · +${money(habit.reales)} · ${frecuencia(habit)}`
 }
+
+export type Nivel = { nivel: number; xpEnNivel: number; xpParaSubir: number }
+
+// Para pasar del nivel n al n+1 se necesitan 200 × n XP
+export function nivelDe(xpTotal: number): Nivel {
+  let nivel = 1
+  let resto = xpTotal
+  while (resto >= 200 * nivel) {
+    resto -= 200 * nivel
+    nivel++
+  }
+  return { nivel, xpEnNivel: resto, xpParaSubir: 200 * nivel }
+}

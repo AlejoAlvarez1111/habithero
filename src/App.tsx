@@ -5,6 +5,7 @@ import Layout from './components/Layout'
 import Home from './pages/Home'
 import Shop from './pages/Shop'
 import Pronto from './pages/Pronto'
+import Areas from './pages/Areas'
 
 export default function App() {
   const { session, loading } = useAuth()
@@ -18,7 +19,7 @@ export default function App() {
         <Route element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="tienda" element={<Shop />} />
-          <Route path="areas" element={<Pronto titulo="Áreas de vida" />} />
+          <Route path="areas" element={<Areas />} />
           <Route path="jefes" element={<Pronto titulo="Jefes del mes" />} />
           <Route path="logros" element={<Pronto titulo="Logros y medallas" />} />
           <Route path="historial" element={<Pronto titulo="Historial" />} />

@@ -30,3 +30,17 @@ export function inicioSemana(fecha: string): string {
 export function inicioMes(fecha: string): string {
   return fecha.slice(0, 8) + '01'
 }
+
+// Primer día del mes que está n meses adelante
+export function sumarMeses(fecha: string, meses: number): string {
+  const d = aUtc(inicioMes(fecha))
+  d.setUTCMonth(d.getUTCMonth() + meses)
+  return aTexto(d)
+}
+
+// Primer día del trimestre (enero, abril, julio u octubre)
+export function inicioTrimestre(fecha: string): string {
+  const [y, m] = fecha.split('-').map(Number)
+  const mesInicio = Math.floor((m - 1) / 3) * 3 + 1
+  return `${y}-${String(mesInicio).padStart(2, '0')}-01`
+}

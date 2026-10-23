@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import Shop from './pages/Shop'
 import Pronto from './pages/Pronto'
 import Areas from './pages/Areas'
+import Bosses from './pages/Bosses'
 
 export default function App() {
   const { session, loading } = useAuth()
@@ -20,7 +21,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="tienda" element={<Shop />} />
           <Route path="areas" element={<Areas />} />
-          <Route path="jefes" element={<Pronto titulo="Jefes del mes" />} />
+          <Route path="jefes" element={<Bosses />} />
           <Route path="logros" element={<Pronto titulo="Logros y medallas" />} />
           <Route path="historial" element={<Pronto titulo="Historial" />} />
           <Route path="ajustes" element={<Pronto titulo="Ajustes" />} />

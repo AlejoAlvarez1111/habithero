@@ -535,3 +535,79 @@ input:focus-visible {
     grid-template-columns: 1fr;
   }
 }
+
+/* Jefes */
+.jefes-layout {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.jefes-lado {
+  display: grid;
+  gap: 1rem;
+}
+
+.jefe h2 {
+  font-size: 1.5rem;
+  margin: 0.25rem 0 1rem;
+}
+
+.premio {
+  display: flex;
+  gap: 1.5rem;
+  margin: 1rem 0 0;
+  font-family: 'Fredoka', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.mint {
+  color: var(--mint);
+}
+
+.rojo {
+  color: var(--danger-text);
+}
+
+.form-jefe {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.form-jefe label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.form-jefe input,
+.form-jefe select,
+.form-jefe textarea {
+  min-height: 44px;
+  padding: 0.75rem;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--text);
+  font: inherit;
+}
+
+.form-jefe textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.form-jefe .muted {
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .jefes-layout {
+    grid-template-columns: 1fr;
+  }
+}

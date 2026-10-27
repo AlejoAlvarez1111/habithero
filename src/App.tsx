@@ -9,6 +9,7 @@ import Areas from './pages/Areas'
 import Bosses from './pages/Bosses'
 import Achievements from './pages/Achievements'
 import History from './pages/History'
+import Settings from './pages/Settings'
 
 export default function App() {
   const { session, loading } = useAuth()
@@ -26,7 +27,7 @@ export default function App() {
           <Route path="jefes" element={<Bosses />} />
           <Route path="logros" element={<Achievements />} />
           <Route path="historial" element={<History />} />
-          <Route path="ajustes" element={<Pronto titulo="Ajustes" />} />
+          <Route path="ajustes" element={<Settings />} />
           <Route
             path="*"
             element={<Pronto titulo="Página no encontrada" mensaje="Esa dirección no existe." />}

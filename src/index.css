@@ -611,3 +611,83 @@ input:focus-visible {
     grid-template-columns: 1fr;
   }
 }
+
+/* Logros */
+.aviso-logro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  border-color: var(--gold);
+}
+
+.aviso-logro p {
+  margin: 0.25rem 0;
+}
+
+.logros-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.logros-secciones {
+  display: grid;
+  gap: 1rem;
+}
+
+.logros-lista {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.logro {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logro.bloqueado strong {
+  color: var(--muted);
+}
+
+.logro p {
+  margin: 0.15rem 0;
+}
+
+.detalle {
+  font-size: 0.85rem;
+}
+
+@media (max-width: 900px) {
+  .logros-layout {
+    grid-template-columns: 1fr;
+  }
+}
+/* Caído */
+.caido-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.cuerpo.gris {
+  filter: grayscale(1) brightness(0.65);
+}
+
+.caido-layout .btn {
+  margin-top: 1rem;
+}
+
+@media (max-width: 900px) {
+  .caido-layout {
+    grid-template-columns: 1fr;
+  }
+}

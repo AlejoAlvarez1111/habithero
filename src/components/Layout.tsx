@@ -1,6 +1,7 @@
 import { NavLink, Outlet } from 'react-router'
 import { useAuth } from '../auth/context'
 import { GameProvider } from '../game/GameProvider'
+import AvisoLogros from './AvisoLogros'
 
 const enlaces = [
   { to: '/', texto: 'Inicio' },
@@ -43,6 +44,7 @@ export default function Layout() {
         </nav>
 
         <main>
+          <AvisoLogros />
           <Outlet />
         </main>
       </div>

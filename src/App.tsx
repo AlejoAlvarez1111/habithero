@@ -7,6 +7,7 @@ import Shop from './pages/Shop'
 import Pronto from './pages/Pronto'
 import Areas from './pages/Areas'
 import Bosses from './pages/Bosses'
+import Achievements from './pages/Achievements'
 
 export default function App() {
   const { session, loading } = useAuth()
@@ -22,7 +23,7 @@ export default function App() {
           <Route path="tienda" element={<Shop />} />
           <Route path="areas" element={<Areas />} />
           <Route path="jefes" element={<Bosses />} />
-          <Route path="logros" element={<Pronto titulo="Logros y medallas" />} />
+          <Route path="logros" element={<Achievements />} />
           <Route path="historial" element={<Pronto titulo="Historial" />} />
           <Route path="ajustes" element={<Pronto titulo="Ajustes" />} />
           <Route
